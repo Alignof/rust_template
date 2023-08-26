@@ -31,6 +31,8 @@ jobs:
           reporter: github-pr-review
           clippy_flags: --all-features
 
+      - name: format check 
+        run: cargo fmt --all -- --check
 
       - name: unit test
         run: cargo test
