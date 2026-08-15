@@ -12,10 +12,8 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: install clippy
+      - name: install toolchain
         uses: dtolnay/rust-toolchain@stable
-        with:
-          components: clippy
 
       - uses: sksat/action-clippy@v1.0.0
         if: github.event_name == 'push'
